@@ -26,21 +26,37 @@ body {
     position: relative;
 }
 
-.soya{
+.soya {
     position: absolute;
-    left: 36%;
-    top: 50px;
-    width: 50%;
+    left: 64.5%;
+    top: 55px;
+    width: 465px;
     height: 500px;
-    background-color: rgba(0, 0, 0, 0.404);
-    transform: rotate(30deg);
-    
+    background-color: #8d383b;
+    transform: skew(12deg) rotate(12deg);
+    transform-origin: top left;
+    z-index: 0;
+    // transform-origin: top right;
+}
+.soya1 {
+    position: absolute;
+    left: 35.5%;
+    top: 459.4px;
+    width: 848px;
+    height: 90px;
+    background-color: #8d383b
+;
+    transform: skew(12deg) rotate(12deg);
+    transform-origin: top left;
+    z-index: -1;
 }
 
 .container {
     display: flex;
     justify-content: center;
     #calculator {
+        position: relative;
+        z-index: 1;
         background-image: linear-gradient(
             to right,
             $calculatorColor,

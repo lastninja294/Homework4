@@ -22,13 +22,30 @@ body {
 
 .soya {
   position: absolute;
-  left: 36%;
-  top: 50px;
-  width: 50%;
+  left: 64.5%;
+  top: 55px;
+  width: 465px;
   height: 500px;
-  background-color: rgba(0, 0, 0, 0.404);
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+  background-color: #8d383b;
+  -webkit-transform: skew(12deg) rotate(12deg);
+          transform: skew(12deg) rotate(12deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  z-index: 0;
+}
+
+.soya1 {
+  position: absolute;
+  left: 35.5%;
+  top: 459.4px;
+  width: 848px;
+  height: 90px;
+  background-color: #8d383b;
+  -webkit-transform: skew(12deg) rotate(12deg);
+          transform: skew(12deg) rotate(12deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  z-index: -1;
 }
 
 .container {
@@ -41,6 +58,8 @@ body {
 }
 
 .container #calculator {
+  position: relative;
+  z-index: 1;
   background-image: -webkit-gradient(linear, left top, right top, from(#373735), color-stop(#292927), to(#1f1f1d));
   background-image: linear-gradient(to right, #373735, #292927, #1f1f1d);
   color: #fff;
