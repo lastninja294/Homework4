@@ -19,7 +19,7 @@ for (let i = 0; i < elements.length; i++) {
     }
     if (elements[i].innerText == "M+") {
         elements[i].addEventListener("click", function () {
-            value.value = "";
+            value.value = value.value.slice(0,-1);
         });
     }
     if (elements[i].innerText == "=") {
