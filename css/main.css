@@ -1,1 +1,32 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #c97072;
+}
+
+#calculator {
+  background-image: -webkit-gradient(linear, left top, right top, from(#373735), color-stop(#292927), to(#1f1f1d));
+  background-image: linear-gradient(to right, #373735, #292927, #1f1f1d);
+  color: #fff;
+  width: 420px;
+  height: 500px;
+  margin-top: 50px;
+  border-radius: 15px;
+}
+/*# sourceMappingURL=main.css.map */

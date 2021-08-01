@@ -1,0 +1,36 @@
+$calculatorColor: #373735;
+$backColor: #c97072;
+$equalColor: #c15433;
+$numberColor: #535353;
+$displayColor: #9ca672;
+$buttonColor: #191917;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    background-color: $backColor;
+}
+
+#calculator {
+    background-image: linear-gradient(
+        to right,
+        $calculatorColor,
+        #292927,
+        #1f1f1d
+    );
+    color: #fff;
+    width: 420px;
+    height: 500px;
+    margin-top: 50px;
+    border-radius: 15px;
+}
