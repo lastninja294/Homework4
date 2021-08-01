@@ -4,6 +4,12 @@ $equalColor: #c15433;
 $numberColor: #535353;
 $displayColor: #9ca672;
 $buttonColor: #191917;
+
+@font-face {
+    font-family: pexelFont;
+    src: url("../slkscr.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,21 +22,155 @@ a {
 
 body {
     font-family: monospace;
-    display: flex;
-    justify-content: center;
     background-color: $backColor;
+    position: relative;
 }
 
-#calculator {
-    background-image: linear-gradient(
-        to right,
-        $calculatorColor,
-        #292927,
-        #1f1f1d
-    );
-    color: #fff;
-    width: 420px;
+.soya{
+    position: absolute;
+    left: 36%;
+    top: 50px;
+    width: 50%;
     height: 500px;
-    margin-top: 50px;
-    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.404);
+    transform: rotate(30deg);
+    
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    #calculator {
+        background-image: linear-gradient(
+            to right,
+            $calculatorColor,
+            #292927,
+            #1f1f1d
+        );
+        color: #fff;
+        width: 400px;
+        height: 500px;
+        margin-top: 50px;
+        border-radius: 15px;
+        input {
+            display: block;
+            all: unset;
+            background-color: $displayColor;
+            width: 90%;
+            margin: 35px 5%;
+            margin-bottom: 25px;
+            height: 80px;
+            border-radius: 15px;
+            caret-color: $displayColor;
+            font-size: 2rem;
+            color: black;
+            font-family: pexelFont, monospace;
+        }
+        table {
+            width: 90%;
+            height: 330px;
+            margin: auto;
+            border-collapse: separate;
+            border-spacing: 10px;
+            tr {
+                td {
+                    text-align: center;
+                    background-color: $numberColor;
+                    font-size: 1.75rem;
+                    padding: 5px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        background-color: darken(
+                            $color: $numberColor,
+                            $amount: 10
+                        );
+                    }
+                }
+                &:first-child {
+                    td {
+                        background-color: $buttonColor;
+                        &:hover {
+                            background-color: darken(
+                                $color: $buttonColor,
+                                $amount: 10
+                            );
+                        }
+                    }
+                }
+                .equal {
+                    background-color: $equalColor;
+                    &:hover {
+                        background-color: darken(
+                            $color: $equalColor,
+                            $amount: 10
+                        );
+                    }
+                }
+            }
+        }
+    }
+}
+
+// #calculator {
+//     background-image: linear-gradient(
+//         to right,
+//         $calculatorColor,
+//         #292927,
+//         #1f1f1d
+//     );
+//     color: #fff;
+//     width: 400px;
+//     height: 500px;
+//     margin-top: 50px;
+//     border-radius: 15px;
+//     input {
+//         display: block;
+//         all: unset;
+//         background-color: $displayColor;
+//         width: 90%;
+//         margin: 35px 5%;
+//         margin-bottom: 25px;
+//         height: 80px;
+//         border-radius: 15px;
+//         caret-color: $displayColor;
+//         font-size: 2rem;
+//         color: black;
+//         font-family: "Silkscreen", monospace;
+//     }
+//     table {
+//         width: 90%;
+//         height: 330px;
+//         margin: auto;
+//         border-collapse: separate;
+//         border-spacing: 10px;
+//         tr {
+//             td {
+//                 text-align: center;
+//                 background-color: $numberColor;
+//                 font-size: 1.75rem;
+//                 padding: 5px;
+//                 transition: all 0.3s ease-in-out;
+//                 &:hover {
+//                     background-color: darken($color: $numberColor, $amount: 10);
+//                 }
+//             }
+//             &:first-child {
+//                 td {
+//                     background-color: $buttonColor;
+//                     &:hover {
+//                         background-color: darken(
+//                             $color: $buttonColor,
+//                             $amount: 10
+//                         );
+//                     }
+//                 }
+//             }
+//             .equal {
+//                 background-color: $equalColor;
+//                 &:hover {
+//                     background-color: darken($color: $equalColor, $amount: 10);
+//                 }
+//             }
+//         }
+//     }
+// }

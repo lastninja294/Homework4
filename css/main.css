@@ -1,3 +1,8 @@
+@font-face {
+  font-family: pexelFont;
+  src: url("../slkscr.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,22 +16,89 @@ a {
 
 body {
   font-family: monospace;
+  background-color: #c97072;
+  position: relative;
+}
+
+.soya {
+  position: absolute;
+  left: 36%;
+  top: 50px;
+  width: 50%;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.404);
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #c97072;
 }
 
-#calculator {
+.container #calculator {
   background-image: -webkit-gradient(linear, left top, right top, from(#373735), color-stop(#292927), to(#1f1f1d));
   background-image: linear-gradient(to right, #373735, #292927, #1f1f1d);
   color: #fff;
-  width: 420px;
+  width: 400px;
   height: 500px;
   margin-top: 50px;
   border-radius: 15px;
+}
+
+.container #calculator input {
+  display: block;
+  all: unset;
+  background-color: #9ca672;
+  width: 90%;
+  margin: 35px 5%;
+  margin-bottom: 25px;
+  height: 80px;
+  border-radius: 15px;
+  caret-color: #9ca672;
+  font-size: 2rem;
+  color: black;
+  font-family: pexelFont, monospace;
+}
+
+.container #calculator table {
+  width: 90%;
+  height: 330px;
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+.container #calculator table tr td {
+  text-align: center;
+  background-color: #535353;
+  font-size: 1.75rem;
+  padding: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.container #calculator table tr td:hover {
+  background-color: #3a3a3a;
+}
+
+.container #calculator table tr:first-child td {
+  background-color: #191917;
+}
+
+.container #calculator table tr:first-child td:hover {
+  background-color: black;
+}
+
+.container #calculator table tr .equal {
+  background-color: #c15433;
+}
+
+.container #calculator table tr .equal:hover {
+  background-color: #994228;
 }
 /*# sourceMappingURL=main.css.map */
